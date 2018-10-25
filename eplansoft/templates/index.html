@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block styles %}
+<!-- External styles -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock styles %}
+{% block main %}
+<div class="card">
+  <form class="form" data-js="form" method="POST" action="" enctype="multipart/form-data">
+    <fieldset class="fieldset">
+      <legend>
+        <h1>File Upload</h1>
+      </legend>
+      <div class="form-field file-input-field">
+        <label class="file-input-label" for="file-input"><strong>Drop a file here to upload!</strong></label>
+        <input id="file-input" class="file-input" type="file" name="file-input" accept="image/png, image/jpeg" required>
+      </div>
+      <div class="results">
+        <div class="results__description">
+          <p data-js="results__description__name">name: <strong>{{ file_description.file_name }}</strong></p>
+          <p data-js="results__description__type">type: <strong>{{ file_description.file_type }}</strong></p>
+          <p data-js="results__description__size">size: <strong>{{ file_description.file_size }}</strong></p>
+        </div>
+      </div>
+      <div class="form-field">
+        <input class="button" type="submit" name="submit">
+      </div>
+    </fieldset>
+  </form>
+</div>
+{% endblock main %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/index.js')}}"></script>
+{% endblock scripts %}

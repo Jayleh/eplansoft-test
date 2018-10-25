@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    padding: 24px;
+}
+
+.fieldset {
+    padding: 10px;
+}
+
+.file-input-field {
+    position: relative;
+    height: 130px;
+    outline: 2px dashed;
+    background: yellow;
+}
+
+.file-input-label {
+    position: absolute;
+    left: -9%;
+    top: 35%;
+    transform: translate(50%, 50%);
+}
+
+.file-input {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.form-field {
+    padding-bottom: 10px;
+}
+
+.results {
+    padding: 10px 0 10px 0;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .file-input-label {
+        left: 15%;
+        top: 35%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .file-input-label {
+        left: 24%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .file-input-label {
+        left: 25%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .file-input-label {
+        left: 35%;
+    }
+}
